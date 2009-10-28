@@ -15,17 +15,18 @@
 		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
 		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
 		28F335F11007B36200424DE2 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28F335F01007B36200424DE2 /* RootViewController.xib */; };
-		A47F886A10971ABA008A9289 /* PageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = A47F886910971ABA008A9289 /* PageLoader.m */; };
 		A47F887F10971C9A008A9289 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = A47F887E10971C9A008A9289 /* XPathQuery.m */; };
 		A47F888C10971DDB008A9289 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A47F888B10971DDB008A9289 /* libxml2.dylib */; };
 		A47F889310971EFF008A9289 /* EventCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = A47F889210971EFF008A9289 /* EventCenter.m */; };
 		A47F889610971F80008A9289 /* EventCenterIDM.m in Sources */ = {isa = PBXBuildFile; fileRef = A47F889510971F80008A9289 /* EventCenterIDM.m */; };
 		A47F889910971FD7008A9289 /* ATNDEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = A47F889810971FD7008A9289 /* ATNDEvent.m */; };
-		A47F889E10972126008A9289 /* ATNDPageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = A47F889D10972126008A9289 /* ATNDPageLoader.m */; };
 		A47F88A11097239D008A9289 /* NSDictionary+xmlNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A47F88A01097239D008A9289 /* NSDictionary+xmlNode.m */; };
 		A47F892F10972EF1008A9289 /* ATNDEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A47F892D10972EF1008A9289 /* ATNDEventViewController.m */; };
 		A47F893010972EF1008A9289 /* ATNDEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A47F892E10972EF1008A9289 /* ATNDEventViewController.xib */; };
 		A47F8B0610975065008A9289 /* README in Resources */ = {isa = PBXBuildFile; fileRef = A47F8B0510975065008A9289 /* README */; };
+		A47F8B091097F438008A9289 /* ATNDEventLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = A47F8B081097F438008A9289 /* ATNDEventLoader.m */; };
+		A47F8B361097F942008A9289 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A47F8B351097F942008A9289 /* MapKit.framework */; };
+		A47F8B8F109800FB008A9289 /* ATNDEventUser.m in Sources */ = {isa = PBXBuildFile; fileRef = A47F8B8E109800FB008A9289 /* ATNDEventUser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,8 +43,6 @@
 		28F335F01007B36200424DE2 /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* ATNDroid-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ATNDroid-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
-		A47F886810971ABA008A9289 /* PageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageLoader.h; sourceTree = "<group>"; };
-		A47F886910971ABA008A9289 /* PageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageLoader.m; sourceTree = "<group>"; };
 		A47F887D10971C9A008A9289 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
 		A47F887E10971C9A008A9289 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
 		A47F888B10971DDB008A9289 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
@@ -53,14 +52,17 @@
 		A47F889510971F80008A9289 /* EventCenterIDM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventCenterIDM.m; sourceTree = "<group>"; };
 		A47F889710971FD7008A9289 /* ATNDEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATNDEvent.h; sourceTree = "<group>"; };
 		A47F889810971FD7008A9289 /* ATNDEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATNDEvent.m; sourceTree = "<group>"; };
-		A47F889C10972126008A9289 /* ATNDPageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATNDPageLoader.h; sourceTree = "<group>"; };
-		A47F889D10972126008A9289 /* ATNDPageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATNDPageLoader.m; sourceTree = "<group>"; };
 		A47F889F1097239D008A9289 /* NSDictionary+xmlNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+xmlNode.h"; sourceTree = "<group>"; };
 		A47F88A01097239D008A9289 /* NSDictionary+xmlNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+xmlNode.m"; sourceTree = "<group>"; };
 		A47F892C10972EF1008A9289 /* ATNDEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATNDEventViewController.h; sourceTree = "<group>"; };
 		A47F892D10972EF1008A9289 /* ATNDEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATNDEventViewController.m; sourceTree = "<group>"; };
 		A47F892E10972EF1008A9289 /* ATNDEventViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ATNDEventViewController.xib; path = Classes/ATNDEventViewController.xib; sourceTree = "<group>"; };
 		A47F8B0510975065008A9289 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		A47F8B071097F438008A9289 /* ATNDEventLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATNDEventLoader.h; sourceTree = "<group>"; };
+		A47F8B081097F438008A9289 /* ATNDEventLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATNDEventLoader.m; sourceTree = "<group>"; };
+		A47F8B351097F942008A9289 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A47F8B8D109800FB008A9289 /* ATNDEventUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATNDEventUser.h; sourceTree = "<group>"; };
+		A47F8B8E109800FB008A9289 /* ATNDEventUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATNDEventUser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */,
 				A47F888C10971DDB008A9289 /* libxml2.dylib in Frameworks */,
+				A47F8B361097F942008A9289 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,7 +112,6 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				A47F888B10971DDB008A9289 /* libxml2.dylib */,
 				A47F8B0510975065008A9289 /* README */,
 			);
 			name = CustomTemplate;
@@ -138,6 +140,8 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A47F888B10971DDB008A9289 /* libxml2.dylib */,
+				A47F8B351097F942008A9289 /* MapKit.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */,
@@ -165,10 +169,10 @@
 				A47F889510971F80008A9289 /* EventCenterIDM.m */,
 				A47F889710971FD7008A9289 /* ATNDEvent.h */,
 				A47F889810971FD7008A9289 /* ATNDEvent.m */,
-				A47F886810971ABA008A9289 /* PageLoader.h */,
-				A47F886910971ABA008A9289 /* PageLoader.m */,
-				A47F889C10972126008A9289 /* ATNDPageLoader.h */,
-				A47F889D10972126008A9289 /* ATNDPageLoader.m */,
+				A47F8B8D109800FB008A9289 /* ATNDEventUser.h */,
+				A47F8B8E109800FB008A9289 /* ATNDEventUser.m */,
+				A47F8B071097F438008A9289 /* ATNDEventLoader.h */,
+				A47F8B081097F438008A9289 /* ATNDEventLoader.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -239,14 +243,14 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* ATNDroidAppDelegate.m in Sources */,
 				28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */,
-				A47F886A10971ABA008A9289 /* PageLoader.m in Sources */,
 				A47F887F10971C9A008A9289 /* XPathQuery.m in Sources */,
 				A47F889310971EFF008A9289 /* EventCenter.m in Sources */,
 				A47F889610971F80008A9289 /* EventCenterIDM.m in Sources */,
 				A47F889910971FD7008A9289 /* ATNDEvent.m in Sources */,
-				A47F889E10972126008A9289 /* ATNDPageLoader.m in Sources */,
 				A47F88A11097239D008A9289 /* NSDictionary+xmlNode.m in Sources */,
 				A47F892F10972EF1008A9289 /* ATNDEventViewController.m in Sources */,
+				A47F8B091097F438008A9289 /* ATNDEventLoader.m in Sources */,
+				A47F8B8F109800FB008A9289 /* ATNDEventUser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

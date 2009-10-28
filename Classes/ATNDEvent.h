@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
 
+#import "ATNDEventUser.h"
+
 @interface ATNDEvent : NSObject {
 	NSString *title;
 	NSString *subtitle;
@@ -29,6 +31,8 @@
 	
 	NSInteger accepted;
 	NSInteger waiting;
+	
+	NSString *updated;
 	
 	NSMutableArray *comments;
 	NSMutableArray *memberGo;
@@ -54,6 +58,8 @@
 
 @property (readwrite) NSInteger accepted;
 @property (readwrite) NSInteger waiting;
+
+@property (nonatomic,retain) NSString *updated;
 
 @property (nonatomic,retain) NSMutableArray *comments;
 @property (nonatomic,retain) NSMutableArray *memberGo;

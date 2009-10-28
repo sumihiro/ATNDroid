@@ -16,6 +16,7 @@
 @synthesize latitude,longitude;
 @synthesize ownerID,ownerNickname;
 @synthesize accepted,waiting;
+@synthesize updated;
 @synthesize comments;
 @synthesize memberGo,memberOut;
 

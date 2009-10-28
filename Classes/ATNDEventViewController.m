@@ -136,10 +136,10 @@
 			cell.textLabel.text = [event getCommentWithNameAtIndex:[indexPath row]];
 			break;
 		case 2: // memberGo
-			cell.textLabel.text = [[event memberGo] objectAtIndex:[indexPath row]];
+			cell.textLabel.text = [[[event memberGo] objectAtIndex:[indexPath row]] commentWithName];
 			break;
 		case 3: // memberOut
-			cell.textLabel.text = [[event memberOut] objectAtIndex:[indexPath row]];
+			cell.textLabel.text = [[[event memberOut] objectAtIndex:[indexPath row]] commentWithName];
 			break;
 			
 		default:
@@ -242,10 +242,10 @@
 			break;
 			
 		case 2:
-			contentString = [[event memberGo] objectAtIndex:[indexPath row]];
+			contentString = [[[event memberGo] objectAtIndex:[indexPath row]] commentWithName];
 			break;
 		case 3:
-			contentString = [[event memberOut] objectAtIndex:[indexPath row]];
+			contentString = [[[event memberOut] objectAtIndex:[indexPath row]] commentWithName];
 			break;
 			
 		default:
