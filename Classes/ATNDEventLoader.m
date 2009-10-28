@@ -27,8 +27,12 @@
 	event.subtitle = [[eventDict childForTag:@"catch"] nodeContent]; 
 	event.description = [[eventDict childForTag:@"description"] nodeContent]; 
 
-	event.start = [[eventDict childForTag:@"started_at"] nodeContent]; 
-	event.end = [[eventDict childForTag:@"ended_at"] nodeContent]; 
+	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+	[dateFormatter setTimeStyle:NSDateFormatterFullStyle];
+	[dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZZZZ"];
+
+	event.start = [dateFormatter dateFromString:[[eventDict childForTag:@"started-at"] nodeContent]]; 
+	event.end = [dateFormatter dateFromString:[[eventDict childForTag:@"ended-at"] nodeContent]]; 
 	event.url = [[eventDict childForTag:@"url"] nodeContent]; 
 	event.limit = [[[eventDict childForTag:@"limit"] nodeContent] intValue]; 
 	event.address = [[eventDict childForTag:@"address"] nodeContent]; 

@@ -21,7 +21,7 @@
 @synthesize memberGo,memberOut;
 
 - (NSString*)getCommentWithNameAtIndex:(NSInteger)index {
-	return [NSString stringWithFormat:@"%@ - %@ %@",[[comments objectAtIndex:index] objectForKey:@"comment"],[[comments objectAtIndex:index] objectForKey:@"user"],[[comments objectAtIndex:index] objectForKey:@"date"]];
+	return [NSString stringWithFormat:@"%@: %@ %@",[[comments objectAtIndex:index] objectForKey:@"user"],[[comments objectAtIndex:index] objectForKey:@"comment"],[[comments objectAtIndex:index] objectForKey:@"date"]];
 }
 
 @end

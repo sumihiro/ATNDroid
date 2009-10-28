@@ -76,7 +76,7 @@
 #pragma mark Table view methods
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 4;
+    return 9;
 }
 
 
@@ -88,14 +88,22 @@
 			rows = 2;
 			break;
 		case 1:
+		case 2:
+		case 3:
+		case 4:
+		case 5:
+			rows = 1;
+			break;
+
+		case 6:
 			rows = [[event comments] count];
 			break;
 			
-		case 2:
+		case 7:
 			rows = [[event memberGo] count];
 			break;
 			
-		case 3:
+		case 8:
 			rows = [[event memberOut] count];
 			break;
 			
@@ -132,13 +140,28 @@
 					break;
 			}
 			break;
-		case 1: // comments
+		case 1: // date
+			cell.textLabel.text = @"ここに日付が入る";
+			break;
+		case 2: // limit
+			cell.textLabel.text = [NSString stringWithFormat:@"%d人",[event limit]];
+			break;
+		case 3: // place
+			cell.textLabel.text = [event place];
+			break;
+		case 4: // url
+			cell.textLabel.text = [event url];
+			break;
+		case 5: // admin
+			cell.textLabel.text = [event ownerNickname];
+			break;
+		case 6: // comments
 			cell.textLabel.text = [event getCommentWithNameAtIndex:[indexPath row]];
 			break;
-		case 2: // memberGo
+		case 7: // memberGo
 			cell.textLabel.text = [[[event memberGo] objectAtIndex:[indexPath row]] commentWithName];
 			break;
-		case 3: // memberOut
+		case 8: // memberOut
 			cell.textLabel.text = [[[event memberOut] objectAtIndex:[indexPath row]] commentWithName];
 			break;
 			
@@ -155,14 +178,28 @@
 		case 0:
 			header = @"イベント概要";
 			break;
-
 		case 1:
-			header = @"コメント";
+			header = @"日時";
 			break;
 		case 2:
-			header = [NSString stringWithFormat:@"%@ (%d人)",@"参加者",[[event memberGo] count]];
+			header = @"定員";
 			break;
 		case 3:
+			header = @"会場";
+			break;
+		case 4:
+			header = @"URL";
+			break;
+		case 5:
+			header = @"管理者";
+			break;
+		case 6:
+			header = @"コメント";
+			break;
+		case 7:
+			header = [NSString stringWithFormat:@"%@ (%d人)",@"参加者",[[event memberGo] count]];
+			break;
+		case 8:
 			header = [NSString stringWithFormat:@"%@ (%d人)",@"補欠",[[event memberOut] count]];
 			break;
 		default:
@@ -237,14 +274,29 @@
 					break;
 			}
 			break;
-		case 1:
+		case 1: // date
+			contentString = @"ここに日付が入る";
+			break;
+		case 2: // limit
+			contentString = [NSString stringWithFormat:@"%d人",[event limit]];
+			break;
+		case 3: // place
+			contentString = [event place];
+			break;
+		case 4: // url
+			contentString = [event url];
+			break;
+		case 5: // admin
+			contentString = [event ownerNickname];
+			break;
+		case 6:
 			contentString = [event getCommentWithNameAtIndex:[indexPath row]];
 			break;
 			
-		case 2:
+		case 7:
 			contentString = [[[event memberGo] objectAtIndex:[indexPath row]] commentWithName];
 			break;
-		case 3:
+		case 8:
 			contentString = [[[event memberOut] objectAtIndex:[indexPath row]] commentWithName];
 			break;
 			

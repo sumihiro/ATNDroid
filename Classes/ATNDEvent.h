@@ -16,8 +16,8 @@
 	NSString *subtitle;
 	NSString *description;
 	
-	NSString *start;
-	NSString *end;
+	NSDate *start;
+	NSDate *end;
 	NSString *url;
 	NSInteger limit;
 	NSString *address;
@@ -43,8 +43,8 @@
 @property (nonatomic,retain) NSString *subtitle;
 @property (nonatomic,retain) NSString *description;
 
-@property (nonatomic,retain) NSString *start;
-@property (nonatomic,retain) NSString *end;
+@property (nonatomic,retain) NSDate *start;
+@property (nonatomic,retain) NSDate *end;
 @property (nonatomic,retain) NSString *url;
 @property (readwrite) NSInteger limit;
 @property (nonatomic,retain) NSString *address;
