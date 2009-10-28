@@ -11,8 +11,12 @@
 
 @implementation ATNDEvent
 
-@synthesize title,subtitle,description,comments;
-@synthesize date,limit,place,url,admin;
+@synthesize title,subtitle,description;
+@synthesize start,end,url,limit,address,place;
+@synthesize latitude,longitude;
+@synthesize ownerID,ownerNickname;
+@synthesize accepted,waiting;
+@synthesize comments;
 @synthesize memberGo,memberOut;
 
 - (NSString*)getCommentWithNameAtIndex:(NSInteger)index {

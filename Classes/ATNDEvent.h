@@ -7,18 +7,28 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <MapKit/MapKit.h>
 
 @interface ATNDEvent : NSObject {
 	NSString *title;
 	NSString *subtitle;
 	NSString *description;
 	
-	NSString *date;
-	NSString *limit;
-	NSString *place;
+	NSString *start;
+	NSString *end;
 	NSString *url;
-	NSString *admin;
+	NSInteger limit;
+	NSString *address;
+	NSString *place;
+
+	CLLocationDegrees latitude;
+	CLLocationDegrees longitude;
+	
+	NSString *ownerID;
+	NSString *ownerNickname;
+	
+	NSInteger accepted;
+	NSInteger waiting;
 	
 	NSMutableArray *comments;
 	NSMutableArray *memberGo;
@@ -29,11 +39,21 @@
 @property (nonatomic,retain) NSString *subtitle;
 @property (nonatomic,retain) NSString *description;
 
-@property (nonatomic,retain) NSString *date;
-@property (nonatomic,retain) NSString *limit;
-@property (nonatomic,retain) NSString *place;
+@property (nonatomic,retain) NSString *start;
+@property (nonatomic,retain) NSString *end;
 @property (nonatomic,retain) NSString *url;
-@property (nonatomic,retain) NSString *admin;
+@property (readwrite) NSInteger limit;
+@property (nonatomic,retain) NSString *address;
+@property (nonatomic,retain) NSString *place;
+
+@property (readwrite) CLLocationDegrees latitude;
+@property (readwrite) CLLocationDegrees longitude;
+
+@property (nonatomic,retain) NSString *ownerID;
+@property (nonatomic,retain) NSString *ownerNickname;
+
+@property (readwrite) NSInteger accepted;
+@property (readwrite) NSInteger waiting;
 
 @property (nonatomic,retain) NSMutableArray *comments;
 @property (nonatomic,retain) NSMutableArray *memberGo;
